@@ -1,0 +1,17 @@
+<h1>Stupid coaching</h1>
+
+<h2><%=params[:ask]%></h2>
+<h3>-You</h3>
+
+<% if params[:ask] === 'I am going to work'%>
+<h2>Great!</h2>
+<h3>-Your Coach</h3>
+<% elsif params[:ask].include? '?' %>
+<h2>Silly question, get dressed and go to work!</h2>
+<h3>-Your Coach</h3>
+<% else params[:ask] != 'I am going to work'%>
+<h2>I don't care, get dressed and go to work!</h2>
+<h3>-Your Coach</h3>
+<% end %>
+
+<%= link_to "<- Return to Home", root_path %>
